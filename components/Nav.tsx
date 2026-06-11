@@ -40,7 +40,7 @@ export default function Nav() {
         <Link href="/#about">About</Link>
         <a href="#">Resume</a>
       </div>
-      <a href="mailto:hello@sharon.design" className="nav-cta">Let&#39;s talk</a>
+      <a href="mailto:hello@sharon.design" className="nav-cta">Let&apos;s talk →</a>
     </nav>
   );
 }
