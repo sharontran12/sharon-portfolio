@@ -138,25 +138,8 @@ export default function StixTaxii() {
 
           <div className="cs3-solution-cards">
             <div className="cs3-solution-card">
-              <div className="cs3-solution-visual">
-                <svg viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg" style={{width:'100%'}}>
-                  <rect width="200" height="120" rx="8" fill="#1E2329"/>
-                  <rect x="12" y="12" width="176" height="28" rx="6" fill="#2C333D"/>
-                  <circle cx="22" cy="26" r="5" fill="#C04E2A" opacity=".8"/>
-                  <text x="32" y="30" fontSize="8" fontWeight="600" fill="#E8EEF5" fontFamily="Hanken Grotesk,sans-serif">AlienVault OTX</text>
-                  <rect x="150" y="19" width="32" height="14" rx="7" fill="rgba(61,189,110,.2)"/>
-                  <text x="166" y="29" fontSize="7" fill="#3DBD6E" textAnchor="middle" fontFamily="Hanken Grotesk,sans-serif">Active</text>
-                  <rect x="12" y="48" width="176" height="28" rx="6" fill="#2C333D"/>
-                  <circle cx="22" cy="62" r="5" fill="#FEBC2E" opacity=".8"/>
-                  <text x="32" y="66" fontSize="8" fontWeight="600" fill="#E8EEF5" fontFamily="Hanken Grotesk,sans-serif">MISP Feed</text>
-                  <rect x="145" y="55" width="37" height="14" rx="7" fill="rgba(254,188,46,.15)"/>
-                  <text x="163" y="65" fontSize="7" fill="#FEBC2E" textAnchor="middle" fontFamily="Hanken Grotesk,sans-serif">Syncing</text>
-                  <rect x="12" y="84" width="176" height="28" rx="6" fill="#2C333D"/>
-                  <circle cx="22" cy="98" r="5" fill="#3DBD6E" opacity=".8"/>
-                  <text x="32" y="102" fontSize="8" fontWeight="600" fill="#E8EEF5" fontFamily="Hanken Grotesk,sans-serif">Cisco Talos</text>
-                  <rect x="150" y="91" width="32" height="14" rx="7" fill="rgba(61,189,110,.2)"/>
-                  <text x="166" y="101" fontSize="7" fill="#3DBD6E" textAnchor="middle" fontFamily="Hanken Grotesk,sans-serif">Active</text>
-                </svg>
+              <div className="cs3-solution-visual cs3-solution-visual--light">
+                <img src="/Status.png" alt="Status indicators" style={{height:'100%',width:'auto',display:'block'}}/>
               </div>
               <div className="cs3-solution-card-label">Live feed status at a glance</div>
               <p className="cs3-solution-card-desc">No digging through logs to know if your intel is actually working.</p>
@@ -235,34 +218,6 @@ export default function StixTaxii() {
             </div>
           </div>
 
-          {/* Status badge reference */}
-          <div className="cs3-artifact">
-            <p className="cs3-artifact-label">Status indicators — designed for clarity at a glance</p>
-            <svg viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg" style={{width:280,display:'block',margin:'0 auto'}}>
-              {/* Integrated */}
-              <rect x="0" y="0" width="320" height="44" rx="22" fill="#E0F0FF"/>
-              <circle cx="32" cy="22" r="13" fill="#2196F3"/>
-              <path d="M26 22l5 5 9-9" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-              <text x="56" y="27" fontSize="16" fontWeight="600" fill="#1A1A2E" fontFamily="Hanken Grotesk,sans-serif">Integrated</text>
-              {/* Not integrated */}
-              <rect x="0" y="58" width="320" height="44" rx="22" fill="#EEEEF0"/>
-              <circle cx="32" cy="80" r="13" fill="#9E9EA8"/>
-              <line x1="25" y1="80" x2="39" y2="80" stroke="#fff" strokeWidth="2.5" strokeLinecap="round"/>
-              <text x="56" y="85" fontSize="16" fontWeight="600" fill="#1A1A2E" fontFamily="Hanken Grotesk,sans-serif">Not integrated</text>
-              {/* In progress */}
-              <rect x="0" y="116" width="320" height="44" rx="22" fill="#EDE8FA"/>
-              <circle cx="32" cy="138" r="13" fill="#7C5CBF"/>
-              <circle cx="26" cy="138" r="2.2" fill="#fff"/>
-              <circle cx="32" cy="138" r="2.2" fill="#fff"/>
-              <circle cx="38" cy="138" r="2.2" fill="#fff"/>
-              <text x="56" y="143" fontSize="16" fontWeight="600" fill="#1A1A2E" fontFamily="Hanken Grotesk,sans-serif">In progress</text>
-              {/* Error */}
-              <rect x="0" y="174" width="320" height="44" rx="22" fill="#FDEAEA"/>
-              <polygon points="32,164 42,182 22,182" fill="#E53935" transform="translate(0,3)"/>
-              <text x="32" y="196" fontSize="11" fontWeight="800" fill="#fff" textAnchor="middle" fontFamily="Hanken Grotesk,sans-serif">✕</text>
-              <text x="56" y="201" fontSize="16" fontWeight="600" fill="#1A1A2E" fontFamily="Hanken Grotesk,sans-serif">Error</text>
-            </svg>
-          </div>
 
           <div className="cs2-flow-diagram" style={{marginTop:40}}>
             <p className="cs2-flow-label">The mental model I designed around</p>

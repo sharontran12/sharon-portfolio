@@ -1432,6 +1432,37 @@ footer {
   background: #1E2329;
   box-sizing: border-box;
 }
+.cs3-solution-visual--light {
+  background: #F5F3EE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  height: 152px;
+  overflow: hidden;
+}
+.cs3-status-mini {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  width: 100%;
+  max-width: 200px;
+}
+.cs3-status-mini-badge {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 7px 14px 7px 8px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #1A1A2E;
+}
+.cs3-status-mini-badge--integrated { background: #DBEEFF; }
+.cs3-status-mini-badge--none       { background: #EEEEF0; }
+.cs3-status-mini-badge--progress   { background: #EDE8FA; }
+.cs3-status-mini-badge--error      { background: #FDEAEA; }
+.cs3-status-mini-badge svg { flex-shrink: 0; }
 .cs3-solution-card-label {
   padding: 14px 16px 6px;
   font-size: 13px;
@@ -1520,3 +1551,24 @@ footer {
   color: var(--faint);
   text-align: center;
 }
+.cs3-status-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 260px;
+}
+.cs3-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 18px 10px 10px;
+  border-radius: 100px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1A1A2E;
+}
+.cs3-badge--integrated { background: #DBEEFF; }
+.cs3-badge--none       { background: #EEEEF0; }
+.cs3-badge--progress   { background: #EDE8FA; }
+.cs3-badge--error      { background: #FDEAEA; }
+.cs3-badge-icon { display: flex; align-items: center; flex-shrink: 0; }
