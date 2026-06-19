@@ -20,7 +20,7 @@ export default function StixTaxii() {
             <div className="cs3-toc-label">TABLE OF CONTENTS</div>
             {[
               {n:'01', label:'Context', href:'#context'},
-              {n:'02', label:'User problem', href:'#problem'},
+              {n:'02', label:'Research & Discovery', href:'#problem'},
               {n:'03', label:'Solution', href:'#solution'},
               {n:'04', label:'Design decisions', href:'#decisions'},
               {n:'05', label:'Final design', href:'#final'},
@@ -54,9 +54,7 @@ export default function StixTaxii() {
 
           <h1 className="cs3-title">STIX/TAXII Threat Intelligence Integration</h1>
           <p className="cs3-desc">
-            Designed end-to-end UX for automating threat intelligence feed ingestion — eliminating manual IOC entry
-            and positioning Cisco Secure Access <strong>ahead of Zscaler, Netskope, and Palo Alto Networks</strong> in onboarding experience.
-            Shipped in 7 weeks.
+            I designed the end-to-end UX for STIX/TAXII threat intelligence feed integration in Cisco Secure Access — a brand new capability that lets IT admins connect commercial, government, and open-source threat intelligence directly to their security policies. This feature shipped in early access and positioned Secure Access <strong>ahead of competitors like Zscaler and Netskope</strong> in onboarding experience.
           </p>
 
           <div className="cs3-meta-strip">
@@ -81,54 +79,55 @@ export default function StixTaxii() {
 
         {/* ── 01 CONTEXT ── */}
         <section className="cs3-section" id="context">
-          <div className="cs3-section-label">CONTEXT</div>
-          <h2 className="cs3-statement">Security teams paying for live threat intel — then copying it by hand.</h2>
+          <div className="cs3-section-label">CONTEXT & USER PROBLEM</div>
+          <h2 className="cs3-statement">Customers had the threat intel. They just had no way to use it.</h2>
           <p className="cs3-p">
-            Cisco Secure Access customers subscribe to commercial STIX/TAXII threat feeds — live streams of malicious domains, IPs, and URLs. But there was no integration path: every indicator had to be <strong>manually copied into security policy, every day, for potentially thousands of IOCs.</strong> The data was stale the moment the admin finished.
+            Customers are already subscribed to commercial, governmental, and open-source threat intelligence feeds. These feeds are served by TAXII servers and delivered in the STIX format — containing domains, URLs, and IPs classified as <strong>indicators of compromise (IOCs)</strong>: known-bad signals that security teams use to block malicious traffic.
           </p>
           <p className="cs3-p">
-            Competitors had already solved this. Every week without a native integration was a retention risk.
+            But Secure Access had no direct path to ingest these feeds. Customers couldn&apos;t connect their threat intelligence sources to their security policies natively — creating a gap between the protection they were paying for and the posture they needed to maintain.
           </p>
           <div className="cs3-quote-block">
-            <p>&ldquo;The business risk was real — customers were choosing competitors with native feed integrations. Every week without this feature was churn we couldn&apos;t afford.&rdquo;</p>
+            <p>&ldquo;Customers are asking why they can&apos;t bring their own threat intel into Secure Access. Competitors already support this. We need to close this gap before it becomes a bigger retention problem.&rdquo;</p>
             <span>— PM requirement brief</span>
           </div>
         </section>
 
-        {/* ── 02 USER PROBLEM ── */}
+        {/* ── 02 RESEARCH & DISCOVERY ── */}
         <section className="cs3-section" id="problem">
-          <div className="cs3-section-label">USER PROBLEM</div>
-          <h2 className="cs3-statement">It&apos;s difficult and time-consuming to keep threat intelligence in sync with security policy.</h2>
+          <div className="cs3-section-label">RESEARCH & DISCOVERY</div>
+          <h2 className="cs3-statement">The admin shouldn&apos;t need a PhD in threat intel to do their job.</h2>
           <p className="cs3-p">
-            IT admins aren&apos;t threat intelligence specialists — they shouldn&apos;t need to be. But without automation, they were expected to manually maintain hundreds to thousands of indicators, understand opaque TAXII protocol vocabulary, and somehow know when their data went stale.
+            Research was driven by customer request logs, PM-gathered requirements, and competitive analysis of Zscaler, Netskope, and Palo Alto Networks. Our primary user — &ldquo;Kit,&rdquo; an IT Admin responsible for managing organizational security posture — wasn&apos;t a threat intelligence specialist. But the problem kept landing in their lap.
           </p>
 
-          <div className="cs2-ba-grid">
-            <div className="cs2-ba-card cs2-ba-before">
-              <div className="cs2-ba-label">BEFORE</div>
-              <div className="cs2-ba-heading">Manual IOC Entry</div>
-              <ul className="cs2-ba-list">
-                <li>Copy indicators from threat feed dashboard</li>
-                <li>Paste one-by-one into Destination Lists</li>
-                <li>No sync — data went stale immediately</li>
-                <li>Hours of repetitive work per admin, per week</li>
-              </ul>
+          <div className="cs3-findings">
+            <div className="cs3-finding">
+              <div className="cs3-finding-n">01</div>
+              <div className="cs3-finding-body">
+                <div className="cs3-finding-title">No automation path</div>
+                <p className="cs3-finding-desc">Customers had live threat feeds but no direct way to pipe them into Secure Access. Every IOC had to be manually entered — a gap that grew more painful as feed volumes scaled.</p>
+              </div>
             </div>
-            <div className="cs2-ba-card cs2-ba-after">
-              <div className="cs2-ba-label">AFTER</div>
-              <div className="cs2-ba-heading">Automated Feed Integration</div>
-              <ul className="cs2-ba-list">
-                <li>Connect a TAXII server in a guided 3-step flow</li>
-                <li>IOCs auto-synced to Destination Lists in real time</li>
-                <li>Feed → policy rule chain visible and traceable</li>
-                <li>Limits surfaced inline — no silent failures</li>
-              </ul>
+            <div className="cs3-finding">
+              <div className="cs3-finding-n">02</div>
+              <div className="cs3-finding-body">
+                <div className="cs3-finding-title">High cognitive load</div>
+                <p className="cs3-finding-desc">TAXII, STIX, collections, IOCs — the technical vocabulary of threat intelligence is dense. These concepts needed to be surfaced in a way that was easy to understand and navigate, without dumbing down the functionality.</p>
+              </div>
+            </div>
+            <div className="cs3-finding">
+              <div className="cs3-finding-n">03</div>
+              <div className="cs3-finding-body">
+                <div className="cs3-finding-title">Invisible limits</div>
+                <p className="cs3-finding-desc">A 250k destination limit across all lists created real risk of silent enforcement failures. Admins needed awareness — not alarm — so they could act before feeds stopped working.</p>
+              </div>
             </div>
           </div>
 
           <div className="cs3-problem-box">
             <div className="cs3-problem-label">PROBLEM STATEMENT</div>
-            <p>How might we allow users to efficiently connect and trust their threat intelligence feeds — without needing to understand TAXII protocol internals?</p>
+            <p>How might we enable IT admins to seamlessly integrate their threat intelligence feeds into Secure Access — so their IOCs are automatically enforced as policy blocks, keeping end-users protected without manual effort?</p>
           </div>
         </section>
 
@@ -208,39 +207,84 @@ export default function StixTaxii() {
         {/* ── 04 DESIGN DECISIONS ── */}
         <section className="cs3-section" id="decisions">
           <div className="cs3-section-label">DESIGN DECISIONS</div>
-          <h2 className="cs3-statement">I needed to figure out how to make TAXII feel like a product, not a protocol.</h2>
+          <h2 className="cs3-statement">From understanding the problem to shipping the solution.</h2>
           <p className="cs3-p">
-            Before sketching a screen, I mapped the complete mental model: TAXII server → collection → Destination List → Policy Rule. This revealed the core confusion — nobody had ever shown Kit how a threat feed actually becomes an enforced block.
+            My process followed a cycle of Understand → Design Reviews → Handoff → Eng Dev → iterate for the next phase. Each decision below was made during ideation to reduce friction, surface the right information, and keep admins in control without overwhelming them.
           </p>
 
-          <div className="cs2-flow-diagram">
+          <div className="cs2-decision-cards" style={{marginTop:32}}>
+            <div className="cs2-decision-card">
+              <div className="cs2-decision-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+              <div className="cs2-decision-card-title">Configuration flow first</div>
+              <div className="cs2-decision-card-body">I prioritized designing the feed setup — discovery URL, collection ID, auth credentials — as a guided, step-confirmable form rather than a raw config screen. Each step confirmed before moving forward reduced errors and removed the need for protocol knowledge.</div>
+            </div>
+            <div className="cs2-decision-card">
+              <div className="cs2-decision-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></div>
+              <div className="cs2-decision-card-title">Destination List as the bridge</div>
+              <div className="cs2-decision-card-body">Using existing Destination Lists as containers for IOCs was the key architectural decision. I designed the feed → list → policy rule chain to be visible and traceable in the UI, so admins always knew what was actually enforced — and why.</div>
+            </div>
+            <div className="cs2-decision-card">
+              <div className="cs2-decision-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+              <div className="cs2-decision-card-title">Limit-aware design</div>
+              <div className="cs2-decision-card-body">Rather than hiding the 250k destination cap, I designed inline awareness cues — a capacity bar, proactive warnings at 80% — so admins could take action before enforcement silently stopped. The goal was awareness, not alarm.</div>
+            </div>
+            <div className="cs2-decision-card">
+              <div className="cs2-decision-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+              <div className="cs2-decision-card-title">Status at a glance — then iterated</div>
+              <div className="cs2-decision-card-body">Early wireframes surfaced per-instance status inline. A post-launch review in Feb 2026 flagged that the global &ldquo;Integrated&rdquo; label was masking individual feed failures. I iterated to add per-feed health indicators — rebuilding trust through granularity.</div>
+            </div>
+          </div>
+
+          {/* Status badge reference */}
+          <div className="cs3-artifact">
+            <p className="cs3-artifact-label">Status indicators — designed for clarity at a glance</p>
+            <svg viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg" style={{width:280,display:'block',margin:'0 auto'}}>
+              {/* Integrated */}
+              <rect x="0" y="0" width="320" height="44" rx="22" fill="#E0F0FF"/>
+              <circle cx="32" cy="22" r="13" fill="#2196F3"/>
+              <path d="M26 22l5 5 9-9" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+              <text x="56" y="27" fontSize="16" fontWeight="600" fill="#1A1A2E" fontFamily="Hanken Grotesk,sans-serif">Integrated</text>
+              {/* Not integrated */}
+              <rect x="0" y="58" width="320" height="44" rx="22" fill="#EEEEF0"/>
+              <circle cx="32" cy="80" r="13" fill="#9E9EA8"/>
+              <line x1="25" y1="80" x2="39" y2="80" stroke="#fff" strokeWidth="2.5" strokeLinecap="round"/>
+              <text x="56" y="85" fontSize="16" fontWeight="600" fill="#1A1A2E" fontFamily="Hanken Grotesk,sans-serif">Not integrated</text>
+              {/* In progress */}
+              <rect x="0" y="116" width="320" height="44" rx="22" fill="#EDE8FA"/>
+              <circle cx="32" cy="138" r="13" fill="#7C5CBF"/>
+              <circle cx="26" cy="138" r="2.2" fill="#fff"/>
+              <circle cx="32" cy="138" r="2.2" fill="#fff"/>
+              <circle cx="38" cy="138" r="2.2" fill="#fff"/>
+              <text x="56" y="143" fontSize="16" fontWeight="600" fill="#1A1A2E" fontFamily="Hanken Grotesk,sans-serif">In progress</text>
+              {/* Error */}
+              <rect x="0" y="174" width="320" height="44" rx="22" fill="#FDEAEA"/>
+              <polygon points="32,164 42,182 22,182" fill="#E53935" transform="translate(0,3)"/>
+              <text x="32" y="196" fontSize="11" fontWeight="800" fill="#fff" textAnchor="middle" fontFamily="Hanken Grotesk,sans-serif">✕</text>
+              <text x="56" y="201" fontSize="16" fontWeight="600" fill="#1A1A2E" fontFamily="Hanken Grotesk,sans-serif">Error</text>
+            </svg>
+          </div>
+
+          <div className="cs2-flow-diagram" style={{marginTop:40}}>
             <p className="cs2-flow-label">The mental model I designed around</p>
             <svg viewBox="0 0 700 90" xmlns="http://www.w3.org/2000/svg" style={{width:'100%',display:'block'}}>
-              {/* Box 1 */}
               <rect x="0" y="14" width="140" height="56" rx="10" fill="#fff" stroke="#D8D4CC" strokeWidth="1.5"/>
               <text x="70" y="38" textAnchor="middle" fontSize="12" fontWeight="700" fill="#2C2B28" fontFamily="Hanken Grotesk,sans-serif">TAXII Server</text>
               <text x="70" y="55" textAnchor="middle" fontSize="10" fill="#A09D97" fontFamily="Hanken Grotesk,sans-serif">Discovery URL</text>
-              {/* Arrow 1 */}
               <line x1="140" y1="42" x2="168" y2="42" stroke="#C8C4BC" strokeWidth="1.5"/>
               <polygon points="168,38 175,42 168,46" fill="#C8C4BC"/>
               <text x="155" y="34" textAnchor="middle" fontSize="8" fill="#C8C4BC" fontFamily="Hanken Grotesk,sans-serif">polls</text>
-              {/* Box 2 */}
               <rect x="175" y="14" width="140" height="56" rx="10" fill="#fff" stroke="#D8D4CC" strokeWidth="1.5"/>
               <text x="245" y="38" textAnchor="middle" fontSize="12" fontWeight="700" fill="#2C2B28" fontFamily="Hanken Grotesk,sans-serif">Feed Config</text>
               <text x="245" y="55" textAnchor="middle" fontSize="10" fill="#A09D97" fontFamily="Hanken Grotesk,sans-serif">Guided 3-step setup</text>
-              {/* Arrow 2 */}
               <line x1="315" y1="42" x2="343" y2="42" stroke="#C8C4BC" strokeWidth="1.5"/>
               <polygon points="343,38 350,42 343,46" fill="#C8C4BC"/>
               <text x="332" y="34" textAnchor="middle" fontSize="8" fill="#C8C4BC" fontFamily="Hanken Grotesk,sans-serif">syncs</text>
-              {/* Box 3 */}
               <rect x="350" y="14" width="150" height="56" rx="10" fill="#fff" stroke="#D8D4CC" strokeWidth="1.5"/>
               <text x="425" y="38" textAnchor="middle" fontSize="12" fontWeight="700" fill="#2C2B28" fontFamily="Hanken Grotesk,sans-serif">Destination List</text>
               <text x="425" y="55" textAnchor="middle" fontSize="10" fill="#A09D97" fontFamily="Hanken Grotesk,sans-serif">Live IOCs · cap visible</text>
-              {/* Arrow 3 */}
               <line x1="500" y1="42" x2="528" y2="42" stroke="#C8C4BC" strokeWidth="1.5"/>
               <polygon points="528,38 535,42 528,46" fill="#C8C4BC"/>
               <text x="517" y="34" textAnchor="middle" fontSize="8" fill="#C8C4BC" fontFamily="Hanken Grotesk,sans-serif">attaches</text>
-              {/* Box 4 */}
               <rect x="535" y="14" width="130" height="56" rx="10" fill="#2C2B28" stroke="#2C2B28" strokeWidth="1.5"/>
               <text x="600" y="38" textAnchor="middle" fontSize="12" fontWeight="700" fill="#fff" fontFamily="Hanken Grotesk,sans-serif">Policy Rule</text>
               <text x="600" y="55" textAnchor="middle" fontSize="10" fill="#A09D97" fontFamily="Hanken Grotesk,sans-serif">Block / Allow</text>
@@ -253,29 +297,6 @@ export default function StixTaxii() {
             </div>
             <div className="cs2-placeholder-label">INSERT: Wireframes — feed config flow</div>
             <div className="cs2-placeholder-desc">Step 1 (discovery URL) → Step 2 (collection selection) → Step 3 (auth).</div>
-          </div>
-
-          <div className="cs2-decision-cards" style={{marginTop:32}}>
-            <div className="cs2-decision-card">
-              <div className="cs2-decision-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
-              <div className="cs2-decision-card-title">Guided config flow</div>
-              <div className="cs2-decision-card-body">Step-confirmable form instead of a raw config screen. Collections shown as human-readable names, not raw UUIDs.</div>
-            </div>
-            <div className="cs2-decision-card">
-              <div className="cs2-decision-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></div>
-              <div className="cs2-decision-card-title">Traceable chain</div>
-              <div className="cs2-decision-card-body">Feed → Destination List → Policy Rule made visible at every step so Kit always knew what was actually enforced.</div>
-            </div>
-            <div className="cs2-decision-card">
-              <div className="cs2-decision-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
-              <div className="cs2-decision-card-title">Proactive limits</div>
-              <div className="cs2-decision-card-body">&ldquo;3 of 5 feeds used&rdquo; from step one. Per-list capacity bar with 80% warning — proactive, not punitive.</div>
-            </div>
-            <div className="cs2-decision-card">
-              <div className="cs2-decision-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
-              <div className="cs2-decision-card-title">Granular status</div>
-              <div className="cs2-decision-card-body">Post-launch, &ldquo;Integrated&rdquo; masked per-feed failures. Feb 2026 shipped per-feed health indicators — rebuilding trust through clarity.</div>
-            </div>
           </div>
         </section>
 

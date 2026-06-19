@@ -1459,3 +1459,64 @@ footer {
   .cs3-meta-item { flex: 1 1 100%; }
   .cs3-hero-img { width: 95%; }
 }
+
+/* cs3 research findings */
+.cs3-findings {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 28px 0 32px;
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.cs3-finding {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 24px 28px;
+  border-bottom: 1px solid rgba(0,0,0,.06);
+}
+.cs3-finding:last-child { border-bottom: none; }
+.cs3-finding-n {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  color: var(--terra);
+  min-width: 24px;
+  padding-top: 2px;
+}
+.cs3-finding-body { flex: 1; }
+.cs3-finding-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.cs3-finding-desc {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--mid);
+  margin: 0;
+}
+
+/* cs3 design artifact callout */
+.cs3-artifact {
+  margin: 32px 0;
+  padding: 36px 24px;
+  background: var(--white);
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.cs3-artifact-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--faint);
+  text-align: center;
+}
