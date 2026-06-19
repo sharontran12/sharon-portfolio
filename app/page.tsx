@@ -12,161 +12,96 @@ export default function Home() {
       {/* ── HERO ── */}
       <section className="hero">
 
+        {/* Matcha cup */}
+        <div className="hero-illo hero-illo-matcha" aria-hidden="true">
+          <svg viewBox="0 0 88 100" xmlns="http://www.w3.org/2000/svg">
+            {/* steam */}
+            <path d="M32 22 Q29 14 32 8" stroke="#A09D97" strokeWidth="1.4" fill="none" strokeLinecap="round" opacity=".5"/>
+            <path d="M44 20 Q41 11 44 4"  stroke="#A09D97" strokeWidth="1.4" fill="none" strokeLinecap="round" opacity=".5"/>
+            <path d="M56 22 Q53 14 56 8"  stroke="#A09D97" strokeWidth="1.4" fill="none" strokeLinecap="round" opacity=".5"/>
+            {/* saucer */}
+            <ellipse cx="44" cy="86" rx="34" ry="7" fill="#C8B89A" opacity=".6"/>
+            {/* cup body */}
+            <path d="M18 50 Q16 80 44 82 Q72 80 70 50 Z" fill="#E8EDE8"/>
+            <path d="M18 50 Q16 80 44 82 Q72 80 70 50 Z" fill="none" stroke="#CCDACC" strokeWidth="1"/>
+            {/* matcha fill */}
+            <path d="M20 58 Q18 78 44 80 Q70 78 68 58 Z" fill="#8DBD7A" opacity=".85"/>
+            {/* rim */}
+            <ellipse cx="44" cy="50" rx="26" ry="6" fill="#F0F4F0" stroke="#CCDACC" strokeWidth="1"/>
+            {/* handle */}
+            <path d="M70 58 Q82 58 82 66 Q82 74 70 72" stroke="#C8B89A" strokeWidth="2.8" fill="none" strokeLinecap="round"/>
+          </svg>
+        </div>
+
         {/* Flower */}
-        <div className="artifact art-flower">
-          <svg viewBox="0 0 170 210" xmlns="http://www.w3.org/2000/svg">
-            <rect width="170" height="210" rx="14" fill="#F5EDE8"/>
-            <line x1="85" y1="210" x2="85" y2="135" stroke="#8B7A5E" strokeWidth="2.5"/>
-            <path d="M85 165 Q68 148 58 152" stroke="#7DAF7A" strokeWidth="2" fill="none"/>
-            <path d="M85 155 Q102 138 112 142" stroke="#7DAF7A" strokeWidth="2" fill="none"/>
-            <ellipse cx="85" cy="100" rx="16" ry="24" fill="#F0C8CC" transform="rotate(0 85 120)"/>
-            <ellipse cx="85" cy="100" rx="16" ry="24" fill="#EDB8BD" transform="rotate(45 85 120)"/>
-            <ellipse cx="85" cy="100" rx="16" ry="24" fill="#F0C8CC" transform="rotate(90 85 120)"/>
-            <ellipse cx="85" cy="100" rx="16" ry="24" fill="#EDB8BD" transform="rotate(135 85 120)"/>
-            <ellipse cx="85" cy="100" rx="16" ry="24" fill="#F0C8CC" transform="rotate(180 85 120)"/>
-            <ellipse cx="85" cy="100" rx="16" ry="24" fill="#EDB8BD" transform="rotate(225 85 120)"/>
-            <ellipse cx="85" cy="100" rx="16" ry="24" fill="#F0C8CC" transform="rotate(270 85 120)"/>
-            <ellipse cx="85" cy="100" rx="16" ry="24" fill="#EDB8BD" transform="rotate(315 85 120)"/>
-            <ellipse cx="85" cy="108" rx="11" ry="17" fill="#FBDDE0" transform="rotate(22 85 120)"/>
-            <ellipse cx="85" cy="108" rx="11" ry="17" fill="#F9CFD3" transform="rotate(67 85 120)"/>
-            <ellipse cx="85" cy="108" rx="11" ry="17" fill="#FBDDE0" transform="rotate(112 85 120)"/>
-            <ellipse cx="85" cy="108" rx="11" ry="17" fill="#F9CFD3" transform="rotate(157 85 120)"/>
-            <ellipse cx="85" cy="108" rx="11" ry="17" fill="#FBDDE0" transform="rotate(202 85 120)"/>
-            <ellipse cx="85" cy="108" rx="11" ry="17" fill="#F9CFD3" transform="rotate(247 85 120)"/>
-            <circle cx="85" cy="120" r="14" fill="#F4C2A1"/>
-            <circle cx="85" cy="120" r="9"  fill="#EBA882"/>
-            <circle cx="81" cy="117" r="1.5" fill="#C87050" opacity=".7"/>
-            <circle cx="85" cy="115" r="1.5" fill="#C87050" opacity=".7"/>
-            <circle cx="89" cy="117" r="1.5" fill="#C87050" opacity=".7"/>
-            <circle cx="88" cy="122" r="1.5" fill="#C87050" opacity=".7"/>
-            <circle cx="82" cy="122" r="1.5" fill="#C87050" opacity=".7"/>
+        <div className="hero-illo hero-illo-flower" aria-hidden="true">
+          <svg viewBox="0 0 76 90" xmlns="http://www.w3.org/2000/svg">
+            {/* stem */}
+            <line x1="38" y1="90" x2="38" y2="58" stroke="#8B7A5E" strokeWidth="2" strokeLinecap="round"/>
+            <path d="M38 72 Q28 64 22 67" stroke="#7DAF7A" strokeWidth="1.8" fill="none" strokeLinecap="round"/>
+            <path d="M38 66 Q48 58 54 61" stroke="#7DAF7A" strokeWidth="1.8" fill="none" strokeLinecap="round"/>
+            {/* outer petals */}
+            <ellipse cx="38" cy="38" rx="9" ry="16" fill="#F0C8CC" transform="rotate(0 38 52)"/>
+            <ellipse cx="38" cy="38" rx="9" ry="16" fill="#EDB8BD" transform="rotate(60 38 52)"/>
+            <ellipse cx="38" cy="38" rx="9" ry="16" fill="#F0C8CC" transform="rotate(120 38 52)"/>
+            <ellipse cx="38" cy="38" rx="9" ry="16" fill="#EDB8BD" transform="rotate(180 38 52)"/>
+            <ellipse cx="38" cy="38" rx="9" ry="16" fill="#F0C8CC" transform="rotate(240 38 52)"/>
+            <ellipse cx="38" cy="38" rx="9" ry="16" fill="#EDB8BD" transform="rotate(300 38 52)"/>
+            {/* center */}
+            <circle cx="38" cy="52" r="9"  fill="#F4C2A1"/>
+            <circle cx="38" cy="52" r="5.5" fill="#EBA882"/>
+            <circle cx="35.5" cy="50" r="1.2" fill="#C87050" opacity=".7"/>
+            <circle cx="38"   cy="48" r="1.2" fill="#C87050" opacity=".7"/>
+            <circle cx="40.5" cy="50" r="1.2" fill="#C87050" opacity=".7"/>
           </svg>
         </div>
 
-        {/* Color palette */}
-        <div className="artifact art-design">
-          <svg viewBox="0 0 155 185" xmlns="http://www.w3.org/2000/svg">
-            <rect width="155" height="185" rx="14" fill="#E8EEF5"/>
-            <ellipse cx="78" cy="100" rx="52" ry="44" fill="#FAFAFA" stroke="#DDD" strokeWidth="1"/>
-            <ellipse cx="100" cy="82" rx="12" ry="12" fill="#FAFAFA" stroke="#DDD" strokeWidth="1"/>
-            <circle cx="58" cy="88"  r="11" fill="#F4A261"/>
-            <circle cx="82" cy="78"  r="11" fill="#E76F51"/>
-            <circle cx="104" cy="90" r="11" fill="#2A9D8F"/>
-            <circle cx="100" cy="115" r="11" fill="#E9C46A"/>
-            <circle cx="72" cy="118" r="11" fill="#264653"/>
-            <circle cx="52" cy="108" r="11" fill="#A8DADC"/>
-            <circle cx="100" cy="82" r="7" fill="#E8EEF5"/>
-            <line x1="115" y1="55" x2="75" y2="95" stroke="#8B7A5E" strokeWidth="3" strokeLinecap="round"/>
-            <ellipse cx="118" cy="52" rx="5" ry="9" fill="#C87050" transform="rotate(-45 118 52)"/>
-            <ellipse cx="72" cy="98" rx="3" ry="6" fill="#E76F51" transform="rotate(-45 72 98)"/>
+        {/* Paddle / kayak */}
+        <div className="hero-illo hero-illo-paddle" aria-hidden="true">
+          <svg viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            {/* water */}
+            <path d="M4 64 Q18 58 32 64 Q46 70 60 64 Q74 58 88 64 Q96 67 100 64" stroke="#A8C8D8" strokeWidth="1.5" fill="none" strokeLinecap="round" opacity=".6"/>
+            <path d="M0 72 Q14 66 28 72 Q42 78 56 72 Q70 66 84 72 Q92 75 100 72" stroke="#A8C8D8" strokeWidth="1.2" fill="none" strokeLinecap="round" opacity=".4"/>
+            {/* kayak hull */}
+            <path d="M18 60 Q50 52 82 60 Q50 68 18 60 Z" fill="#C04E2A" opacity=".85"/>
+            <path d="M18 60 Q50 56 82 60" stroke="#A03A1A" strokeWidth="1" fill="none" opacity=".5"/>
+            {/* cockpit */}
+            <ellipse cx="50" cy="59" rx="12" ry="4" fill="#8B4513" opacity=".6"/>
+            {/* paddler silhouette */}
+            <circle cx="50" cy="50" r="5" fill="#2C2B28" opacity=".75"/>
+            <path d="M50 55 L50 62" stroke="#2C2B28" strokeWidth="2" strokeLinecap="round" opacity=".75"/>
+            {/* paddle */}
+            <line x1="22" y1="44" x2="78" y2="44" stroke="#8B7A5E" strokeWidth="2" strokeLinecap="round"/>
+            <ellipse cx="20" cy="44" rx="7" ry="11" fill="#6B9CB8" opacity=".8" transform="rotate(-15 20 44)"/>
+            <ellipse cx="80" cy="44" rx="7" ry="11" fill="#6B9CB8" opacity=".8" transform="rotate(15 80 44)"/>
           </svg>
         </div>
 
-        {/* Matcha */}
-        <div className="artifact art-matcha">
-          <svg viewBox="0 0 140 165" xmlns="http://www.w3.org/2000/svg">
-            <rect width="140" height="165" rx="14" fill="#E8F0E8"/>
-            <ellipse cx="70" cy="138" rx="46" ry="9" fill="#C8B89A"/>
-            <ellipse cx="70" cy="135" rx="40" ry="6" fill="#D4C4A8"/>
-            <path d="M34 80 Q30 130 70 132 Q110 130 106 80 Z" fill="#F0F5F0"/>
-            <path d="M34 80 Q30 130 70 132 Q110 130 106 80 Z" fill="none" stroke="#CCDACC" strokeWidth="1.5"/>
-            <path d="M36 88 Q34 120 70 122 Q106 120 104 88 Z" fill="#7AB87A"/>
-            <ellipse cx="70" cy="90" rx="30" ry="7" fill="#A8D4A8" opacity=".7"/>
-            <path d="M52 90 Q70 82 88 90" stroke="#5A9A5A" strokeWidth="1.5" fill="none"/>
-            <path d="M58 87 Q70 84 82 87" stroke="#5A9A5A" strokeWidth="1" fill="none"/>
-            <path d="M106 90 Q122 90 122 105 Q122 120 106 118" stroke="#C8B89A" strokeWidth="3.5" fill="none" strokeLinecap="round"/>
-            <ellipse cx="70" cy="80" rx="36" ry="7" fill="#F5F8F5" stroke="#CCDACC" strokeWidth="1"/>
-            <path d="M56 72 Q52 62 56 54" stroke="#AACCAA" strokeWidth="1.5" fill="none" strokeLinecap="round" opacity=".6"/>
-            <path d="M70 70 Q66 58 70 50" stroke="#AACCAA" strokeWidth="1.5" fill="none" strokeLinecap="round" opacity=".6"/>
-            <path d="M84 72 Q80 62 84 54" stroke="#AACCAA" strokeWidth="1.5" fill="none" strokeLinecap="round" opacity=".6"/>
+        {/* Sprig / leaf */}
+        <div className="hero-illo hero-illo-sprig" aria-hidden="true">
+          <svg viewBox="0 0 64 80" xmlns="http://www.w3.org/2000/svg">
+            <path d="M32 78 Q30 55 22 40" stroke="#8B7A5E" strokeWidth="2" fill="none" strokeLinecap="round"/>
+            <path d="M22 40 Q8 22 12 8 Q26 12 28 30 Q30 38 22 40 Z" fill="#7AAF6A" opacity=".85"/>
+            <path d="M16 26 Q14 20 12 18" stroke="#5A8A4A" strokeWidth="1.2" fill="none" strokeLinecap="round"/>
+            <path d="M20 20 Q18 14 16 11" stroke="#5A8A4A" strokeWidth="1.2" fill="none" strokeLinecap="round"/>
+            <path d="M32 78 Q34 55 44 38" stroke="#8B7A5E" strokeWidth="2" fill="none" strokeLinecap="round"/>
+            <path d="M44 38 Q58 20 54 6 Q40 10 38 28 Q36 36 44 38 Z" fill="#8DBD7A" opacity=".85"/>
+            <path d="M48 24 Q50 18 52 16" stroke="#5A9A48" strokeWidth="1.2" fill="none" strokeLinecap="round"/>
           </svg>
         </div>
 
-        {/* Plant */}
-        <div className="artifact art-plant">
-          <svg viewBox="0 0 155 185" xmlns="http://www.w3.org/2000/svg">
-            <rect width="155" height="185" rx="14" fill="#EAF0E8"/>
-            <path d="M52 158 L48 175 L107 175 L103 158 Z" fill="#C47A55"/>
-            <rect x="46" y="152" width="63" height="10" rx="4" fill="#D4895E"/>
-            <ellipse cx="77" cy="156" rx="28" ry="5" fill="#6B4F3A"/>
-            <path d="M77 155 Q72 130 55 110" stroke="#5A8A4A" strokeWidth="3" fill="none" strokeLinecap="round"/>
-            <path d="M77 155 Q80 125 95 105" stroke="#5A8A4A" strokeWidth="3" fill="none" strokeLinecap="round"/>
-            <path d="M77 155 Q75 135 70 118" stroke="#5A8A4A" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
-            <path d="M55 110 Q30 90 35 65 Q55 68 68 88 Q72 95 65 108 Z" fill="#5A9A4A"/>
-            <path d="M46 90 Q42 84 38 82" stroke="#4A8A3A" strokeWidth="1.5" fill="none"/>
-            <path d="M52 82 Q50 75 48 72" stroke="#4A8A3A" strokeWidth="1.5" fill="none"/>
-            <path d="M95 105 Q122 88 118 62 Q98 63 84 84 Q80 91 88 104 Z" fill="#6AAB58"/>
-            <path d="M108 85 Q112 79 114 76" stroke="#5A9A48" strokeWidth="1.5" fill="none"/>
-            <path d="M102 78 Q105 72 106 68" stroke="#5A9A48" strokeWidth="1.5" fill="none"/>
-            <path d="M70 118 Q58 105 62 90 Q72 92 74 108 Z" fill="#7ABB68"/>
-          </svg>
-        </div>
-
-        {/* Vinyl */}
-        <div className="artifact art-vinyl">
-          <svg viewBox="0 0 118 118" xmlns="http://www.w3.org/2000/svg">
-            <rect width="118" height="118" rx="12" fill="#1E1E1E"/>
-            <circle cx="59" cy="59" r="46" fill="#111"/>
-            <circle cx="59" cy="59" r="40" fill="none" stroke="#2A2A2A" strokeWidth="3"/>
-            <circle cx="59" cy="59" r="33" fill="none" stroke="#2A2A2A" strokeWidth="2"/>
-            <circle cx="59" cy="59" r="26" fill="none" stroke="#2A2A2A" strokeWidth="2"/>
-            <circle cx="59" cy="59" r="19" fill="none" stroke="#2A2A2A" strokeWidth="1.5"/>
-            <circle cx="59" cy="59" r="13" fill="#C04E2A"/>
-            <circle cx="59" cy="59" r="4"  fill="#1E1E1E"/>
-            <circle cx="59" cy="59" r="46" fill="none" stroke="rgba(255,255,255,.05)" strokeWidth="1"/>
-          </svg>
-        </div>
-
-        {/* Cassette */}
-        <div className="artifact art-cassette">
-          <svg viewBox="0 0 130 90" xmlns="http://www.w3.org/2000/svg">
-            <rect width="130" height="90" rx="12" fill="#F5F0E8"/>
-            <rect x="10" y="15" width="110" height="62" rx="8" fill="#2A2A3A"/>
-            <rect x="14" y="19" width="102" height="54" rx="6" fill="#3A3A4A"/>
-            <rect x="28" y="26" width="74" height="36" rx="5" fill="#1A1A2A"/>
-            <circle cx="47" cy="44" r="13" fill="#2A2A3A"/>
-            <circle cx="47" cy="44" r="9"  fill="#4A4A5A"/>
-            <circle cx="47" cy="44" r="5"  fill="#1A1A2A"/>
-            <circle cx="47" cy="44" r="2.5" fill="#888"/>
-            <circle cx="83" cy="44" r="13" fill="#2A2A3A"/>
-            <circle cx="83" cy="44" r="9"  fill="#4A4A5A"/>
-            <circle cx="83" cy="44" r="5"  fill="#1A1A2A"/>
-            <circle cx="83" cy="44" r="2.5" fill="#888"/>
-            <path d="M52 44 Q65 38 78 44" stroke="#888" strokeWidth="1.5" fill="none"/>
-            <rect x="14" y="55" width="102" height="14" rx="0" fill="#C04E2A" opacity=".85"/>
-            <text x="65" y="65" textAnchor="middle" fontFamily="IBM Plex Mono" fontSize="7" fill="rgba(255,255,255,.8)" letterSpacing="2">SHARON MIX</text>
-            <circle cx="18" cy="22" r="3" fill="#2A2A3A"/>
-            <circle cx="112" cy="22" r="3" fill="#2A2A3A"/>
-            <circle cx="18" cy="71" r="3" fill="#2A2A3A"/>
-            <circle cx="112" cy="71" r="3" fill="#2A2A3A"/>
-          </svg>
-        </div>
-
-        {/* Center text */}
         <div className="hero-content">
-          <h1 className="hero-name">Hi there! I&apos;m Sharon</h1>
-          <p className="hero-sub">
-            BFA Digital Media Art &amp; BA Design student<br/>
-            <strong>@ San Jose State University</strong>, emphasis on interaction design &amp; experience design.
+          <h1 className="hero-name">
+            Hello, I&apos;m Sharon Tran.
+          </h1>
+          <p className="hero-tagline">A product designer who makes complex workflows <em>feel</em> simple.</p>
+          <p className="hero-sub">Designer by day, flower farmer by night.</p>
+          <p className="hero-location-line">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M7 1C4.79 1 3 2.79 3 5c0 3 4 8 4 8s4-5 4-8c0-2.21-1.79-4-4-4zm0 5.5A1.5 1.5 0 1 1 7 3a1.5 1.5 0 0 1 0 3z" fill="currentColor"/>
+            </svg>
+            Bay Area · Open to new opportunities
           </p>
-          <p className="hero-sub" style={{marginTop:16}}>Previously @ <strong>Cisco, IBM</strong></p>
-          <div className="available">
-            <span className="available-dot"/>
-            Available for work
-          </div>
-          <Link href="/#work" className="hero-cta" style={{marginTop:28}}>See my work ↗</Link>
-        </div>
-
-        {/* Contact strip */}
-        <div className="hero-footer">
-          <div className="hero-footer-left">
-            <span className="hero-contact-label">Get in touch</span>
-            <div className="hero-contact-links">
-              <a href="mailto:hello@sharon.design">hello@sharon.design</a>
-              <a href="#">LinkedIn</a>
-            </div>
-          </div>
-          <span className="hero-location">San Francisco, CA</span>
         </div>
       </section>
 
@@ -188,7 +123,6 @@ export default function Home() {
             <div className="proj-tags">
               <span className="proj-tag">0 to 1 Design</span>
               <span className="proj-tag">Security</span>
-              <span className="proj-tag">Automation</span>
             </div>
             <div className="proj-metrics">
               <div>
@@ -202,33 +136,10 @@ export default function Home() {
             </div>
             <div className="proj-actions">
               <Link href="/work/stix-taxii" className="proj-cta-primary">View Case Study</Link>
-              <a href="#" className="proj-cta-secondary">View Live (In App) →</a>
             </div>
           </div>
-          <div className="proj-visual">
-            {/* STIX flow mockup */}
-            <div className="mock-browser" style={{width:'90%'}}>
-              <div className="mock-browser-bar">
-                <div className="mock-dot" style={{background:'#FF5F57'}}/>
-                <div className="mock-dot" style={{background:'#FEBC2E'}}/>
-                <div className="mock-dot" style={{background:'#28C840'}}/>
-              </div>
-              <div className="mock-browser-body">
-                <div style={{fontSize:9,fontFamily:'IBM Plex Mono',letterSpacing:'.1em',textTransform:'uppercase',color:'#B4B1AB',marginBottom:10}}>Threat Intelligence Feeds</div>
-                {[
-                  {name:'AlienVault OTX', status:'Connected', col:'#28C840', bg:'#E6F9E6'},
-                  {name:'MISP Feed', status:'Syncing', col:'#FEBC2E', bg:'#FFF8E6'},
-                  {name:'Cisco Talos', status:'Connected', col:'#28C840', bg:'#E6F9E6'},
-                  {name:'Emerging Threats', status:'3 of 5', col:'#3B5BA5', bg:'#E6EBFA'},
-                ].map((r,i) => (
-                  <div key={i} className="mock-row">
-                    <span className="mock-badge-pill" style={{background:r.bg,color:r.col}}>{r.status}</span>
-                    <span className="mock-text">{r.name}</span>
-                    <span className="mock-ts">2h ago</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+          <div className="proj-visual proj-visual--img">
+            <img src="/mock-stix.png" alt="Cisco Secure Access — Third-party integrations" className="proj-mock-img"/>
           </div>
         </div>
 
